@@ -1,13 +1,13 @@
-## Desafio do iClinic
+![iClinic logo](https://d1ydp7gtfj5fb9.cloudfront.net/static/img/views/home_v2/header/logo.png?1525283729)
 
 
 ## Problema
 
-Milhares de eventos são criados na Agenda do iClinic a todo momento, são muitos, mesmo! Com tantos eventos na agenda do profissional de saúde, surge o problema de como buscar esses agendamentos de uma maneira rápida e inteligente.
+Milhares de pacientes são atendidos no iClinic a todo momento, são muitos, mesmo! Com tantos pacientes, surge o problema de prover uma busca rápida e inteligente para nossos clientes.
 
 ## Solução
 
-Implemente uma API REST para que possamos realizar uma busca de pacientes dado uma query e essa API REST possa ser utilizada em um componente de autocomplete em nossa agenda.
+Implemente uma API REST para que possamos realizar uma busca de pacientes dado uma query e essa API REST possa ser utilizada em um componente de autocomplete em nosso produto.
 
 O desafio é composto de duas partes:
 
@@ -48,7 +48,7 @@ Response:
 - Que você implemente o sistema de buscas.
 - Que você implemente a API REST para que, dado uma query, retorna os possiveis resultados.
 - Que seja fácil de rodarmos seu desafio em um ambiente **Linux**.
-- Que você utilize nosso dataset `events.csv` que está nesse repositório para popular sua estrutura de dados e podermos realizar as buscas.
+- Que você utilize nosso dataset `patients.csv` que está nesse repositório para popular sua estrutura de dados e podermos realizar as buscas.
 - Que você popule o sistema de busca no setup/loading time e que ele permaneça imutável em memória durante o runtime.
 
 ## Dicas
@@ -59,5 +59,5 @@ Response:
 - Você **pode** utilizar a biblioteca de testes [py.test](https://github.com/pytest-dev/pytest).
 - Para implementar a estrutura de dados pesquise por `Tree` e outras variações dessa estrutura de dados.
 
-Boa Sorte, 
+Boa Sorte,  
 Equipe iClinic DEV.
