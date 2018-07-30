@@ -7,19 +7,17 @@ Milhares de pacientes são atendidos no iClinic a todo momento, são muitos, mes
 
 ## Solução
 
-Implemente uma API REST para que possamos realizar uma busca de pacientes dado uma query e essa API REST possa ser utilizada em um componente de autocomplete em nosso produto.
+Implemente uma API REST para realizar uma busca de pacientes dado uma query e retornar os possíveis resultados.
 
 O desafio é composto de duas partes:
 
-1. O sistema de busca.
+1. O sistema de autocomplete.
 
-    - O sistema de busca pode ser visto como uma composição de 2 subcomponentes:
+    1. Criar uma Estrutura de Dados para armazenar os nomes dos pacientes.
 
-        1. Uma estrutura de dados para armazenar os nomes dos pacientes. Esta estrutura de dados deve ser rápida para lookups.
+    2. Implementar um algoritmo que, dado a estrutura de dados acima e uma query, retornará possiveis pacientes.
 
-        2. Um algoritmo que, dado a estrutura de dados acima e uma query, retorna os possiveis resultados para aquela query.
-
-2. Uma API REST que recebe uma query, faz uma busca no sistema de busca e retorna os possíveis resultados.
+2. Uma API REST (Você pode utilizar qualquer biblioteca que quiser) que recebe uma query, faz uma busca no sistema de autocomplete utilizando o algoritmo de busca e retorne os possíveis pacientes.
 
 Exemplo de um endpoint para a API REST:
 
@@ -43,21 +41,18 @@ Response:
 
 ## O que esperamos
 
-- Que o desafio seja feito em **Python**.
+- Que o desafio seja feito em **Python** 3+.
 - Que tenha testes automatizados.
-- Que você implemente o sistema de buscas.
-- Que você implemente a API REST para que, dado uma query, retorna os possiveis resultados.
+- Que você implemente o sistema de autocomplete.
+- Que você implemente a API REST para que, dado uma query, retorne os possíveis pacientes a partir do sistema de autocomplete.
 - Que seja fácil de rodarmos seu desafio em um ambiente **Linux**.
-- Que você utilize nosso dataset `patients.csv` que está nesse repositório para popular sua estrutura de dados e podermos realizar as buscas.
-- Que você popule o sistema de busca no setup/loading time e que ele permaneça imutável em memória durante o runtime.
+- Que você utilize nosso dataset `patients.csv` que está nesse repositório para popular sua Estrutura de Dados.
+- Que você popule a Estrutura de Dados quando a API REST inicializar, em memória.
 
-## Dicas
+## O que não esperamos
 
-**pode** não significa **deve**.
+- Que você utilize ORMs e Banco de Dados.
 
-- Você **pode** implementar a API utilizando [Flask](https://github.com/pallets/flask).
-- Você **pode** utilizar a biblioteca de testes [py.test](https://github.com/pytest-dev/pytest).
-- Para implementar a estrutura de dados pesquise por `Tree` e outras variações dessa estrutura de dados.
 
 Boa Sorte,  
 Equipe iClinic DEV.
