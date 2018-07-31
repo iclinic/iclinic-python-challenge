@@ -53,6 +53,9 @@ Response:
 
 - Que você utilize ORMs e Banco de Dados.
 
+## Ajudinha
+
+- Para criar a Estrutura de Dados do sistema de autocomplete pesquise por `Tree` e suas variações.
 
 Boa Sorte,  
 Equipe iClinic DEV.
