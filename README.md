@@ -13,9 +13,9 @@ Implementar uma API REST, contendo o endpoint `[POST] /v2/prescriptions`, para i
  - Os [serviços dependentes](#Servi%C3%A7os-dependentes) deverão ser consultados para compor os dados a serem enviados ao serviço de métricas;
  - Se o serviço de clínicas não responder, o request deverá seguir normalmente, pois o nome da clínica é o único atributo não obrigatório do serviço de métricas;
  - Os dados deverão ser integrados com o serviço de métricas, caso isso não ocorra (por qualquer motivo) deverá ser feito `rollback` e falhar o request;
- - A API REST deverá retornar um erro quando exceder o timeout e a quantidade de tentativas de algum serviço dependente;
+ - A API REST deverá retornar um erro quando exceder o timeout ou a quantidade de tentativas de algum serviço dependente;
 
-Considere as informações abaixo para desenvolver o teste. Se tiver algum tipo de erro não mapeado fique a vontade para adicionar `:)`
+Considere as informações abaixo para desenvolver o teste. Se tiver algum tipo de erro não mapeado fique à vontade para adicionar `:)`
 
 *Request*
 ```bash
@@ -123,7 +123,7 @@ curl -X POST \
 ### O que esperamos
  - Que o desafio seja feito em Python 3+;
  - Passo-a-passo de como rodar sua aplicação;
- - Clareza no código
+ - Clareza no código;
  - Que considere as colunas de `timeout`, `retry` e `cache ttl` nas chamadas dos serviços dependentes;
  - Testes unitários com cobertura `>= 80%`;
  - Princípios SOLID;
