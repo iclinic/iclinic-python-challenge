@@ -7,7 +7,7 @@ A missão da iClinic é descomplicar a saúde no Brasil levando mais gestão a c
 Seu desafio será desenvolver um serviço de prescrição médica e, como parte dele, veremos como você estrutura as camadas de aplicação, chamadas externas, variáveis de ambiente, cache, testes unitários, logs e documentação.
 
 ### Solução
-Implementar uma API REST, contendo o endpoint `[POST] /v2/prescriptions`, para inserir novas prescrições.
+Implementar uma API REST, contendo o endpoint `[POST] /prescriptions`, para inserir novas prescrições.
 
  - O serviço de prescrição deverá persistir no banco de dados somente os atributos recebidos no request;
  - Os [serviços dependentes](#Servi%C3%A7os-dependentes) deverão ser consultados para compor os dados a serem enviados ao serviço de métricas;
@@ -20,7 +20,7 @@ Considere as informações abaixo para desenvolver o teste. Se tiver algum tipo 
 *Request*
 ```bash
 curl -X POST \
-  http://localhost:5000/v2/prescriptions \
+  http://localhost:5000/prescriptions \
   -H 'Content-Type: application/json' \
   -d '{
   "clinic": {
