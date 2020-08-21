@@ -139,4 +139,4 @@ curl -X POST \
 
 ___
 Boa Sorte,
-Equipe iClinic DEV.
+Equipe iClinic.
