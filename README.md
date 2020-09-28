@@ -79,15 +79,15 @@ curl -X POST \
 ### Serviços dependentes
 | host                                                      | method | path            | authorization header                                                                                                                                                                             | timeout | retry | cache ttl |
 |-----------------------------------------------------------|--------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|-------|-----------|
-| https://cryptic-scrubland-98389.herokuapp.com/v2          | GET    | /physicians/:id | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzZXJ2aWNlIjoicGh5c2ljaWFucyJ9.Ei58MtFFGBK4uzpxwnzLxG0Ljdd-NQKVcOXIS4UYJtA | 4s      | 2     | 48hrs     |
-| https://agile-earth-43435.herokuapp.com/v1                | GET    | /clinics/:id    | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzZXJ2aWNlIjoiY2xpbmljcyJ9.r3w8KS4LfkKqZhOUK8YnIdLhVGJEqnReSClLCMBIJRQ     | 5s      | 3     | 72hrs     |
-| https://limitless-shore-81569.herokuapp.com/v3            | GET    | /patients/:id   | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzZXJ2aWNlIjoicGF0aWVudHMifQ.Pr6Z58GzNRtjX8Y09hEBzl7dluxsGiaxGlfzdaphzVU   | 3s      | 2     | 12hrs     |
-| https://mysterious-island-73235.herokuapp.com/api/metrics | POST   | /api/metrics    | Bearer SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c                                                                                                                                               | 6s      | 5     |           |
+| https://5f71da6964a3720016e60ff8.mockapi.io/v1          | GET    | /physicians/:id | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzZXJ2aWNlIjoicGh5c2ljaWFucyJ9.Ei58MtFFGBK4uzpxwnzLxG0Ljdd-NQKVcOXIS4UYJtA | 4s      | 2     | 48hrs     |
+| https://5f71da6964a3720016e60ff8.mockapi.io/v1                | GET    | /clinics/:id    | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzZXJ2aWNlIjoiY2xpbmljcyJ9.r3w8KS4LfkKqZhOUK8YnIdLhVGJEqnReSClLCMBIJRQ     | 5s      | 3     | 72hrs     |
+| https://5f71da6964a3720016e60ff8.mockapi.io/v1            | GET    | /patients/:id   | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzZXJ2aWNlIjoicGF0aWVudHMifQ.Pr6Z58GzNRtjX8Y09hEBzl7dluxsGiaxGlfzdaphzVU   | 3s      | 2     | 12hrs     |
+| https://5f71da6964a3720016e60ff8.mockapi.io/v1 | POST   | /metrics    | Bearer SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c                                                                                                                                               | 6s      | 5     |           |
 
 *Metrics Request.body*
 ```bash
 curl -X POST \
-  https://mysterious-island-73235.herokuapp.com/api/metrics \
+  https://5f71da6964a3720016e60ff8.mockapi.io/v1/metrics \
   -H 'Authorization: Bearer SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -106,7 +106,7 @@ curl -X POST \
 *Metrics Response.body*
 ```json
 {
-    "id": "4d8d9a5a-69d4-45ec-a82e-0b18e8d6276d",
+    "id": "1",
     "clinic_id": 1,
     "clinic_name": "Clinica A",
     "physician_id": 1,
