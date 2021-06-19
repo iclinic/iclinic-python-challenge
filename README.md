@@ -110,7 +110,7 @@ curl -X POST \
     "clinic_id": 1,
     "clinic_name": "Clinica A",
     "physician_id": 1,
-    "physician_name": "Dr. João",
+    "physician_name": "José",
     "physician_crm": "SP293893",
     "patient_id": 1,
     "patient_name": "Rodrigo",
