@@ -140,8 +140,11 @@ curl -X POST \
 ### Não obrigatório, mas recomendado
  - CI (Travis, Gitlab, Circle CI, Github Actions, ...) - extremamente recomendado na vaga para sênior e pleno
  - Executar a aplicação e base de dados em Docker
+ - Efetuar o deploy da aplicação em algum Cloud Provider (Heroku, AWS, Google Cloud, Azure, Digital Ocean, etc) 
 
-
+### Observações
+ - Disponibilizar a URL do Deploy da Aplicação no Readme.md
+ - Disponibilizar a documentação da API desenvolvida
 ___
 Boa Sorte,
 Equipe iClinic.
