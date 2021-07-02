@@ -50,7 +50,10 @@ curl -X POST \
     "patient": {
       "id": 1
     },
-    "text": "Dipirona 1x ao dia"
+    "text": "Dipirona 1x ao dia",
+    "metric": {
+      "id": 1
+    }
   }
 }
 ```
@@ -99,7 +102,8 @@ curl -X POST \
   "patient_id": 1,
   "patient_name": "Rodrigo",
   "patient_email": "rodrigo@gmail.com",
-  "patient_phone": "(16)998765625"
+  "patient_phone": "(16)998765625",
+  "prescription_id": 1
 }'
 ```
 
@@ -115,7 +119,8 @@ curl -X POST \
     "patient_id": 1,
     "patient_name": "Rodrigo",
     "patient_email": "rodrigo@gmail.com",
-    "patient_phone": "(16)998765625"
+    "patient_phone": "(16)998765625",
+    "prescription_id": 1
 }
 ```
 
