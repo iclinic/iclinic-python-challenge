@@ -82,15 +82,15 @@ curl -X POST \
 ### Serviços dependentes
 | host                                                      | method | path            | authorization header                                                                                                                                                                             | timeout | retry | cache ttl |
 |-----------------------------------------------------------|--------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|-------|-----------|
-| https://5f71da6964a3720016e60ff8.mockapi.io/v1          | GET    | /physicians/:id | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzZXJ2aWNlIjoicGh5c2ljaWFucyJ9.Ei58MtFFGBK4uzpxwnzLxG0Ljdd-NQKVcOXIS4UYJtA | 4s      | 2     | 48hrs     |
-| https://5f71da6964a3720016e60ff8.mockapi.io/v1                | GET    | /clinics/:id    | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzZXJ2aWNlIjoiY2xpbmljcyJ9.r3w8KS4LfkKqZhOUK8YnIdLhVGJEqnReSClLCMBIJRQ     | 5s      | 3     | 72hrs     |
-| https://5f71da6964a3720016e60ff8.mockapi.io/v1            | GET    | /patients/:id   | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzZXJ2aWNlIjoicGF0aWVudHMifQ.Pr6Z58GzNRtjX8Y09hEBzl7dluxsGiaxGlfzdaphzVU   | 3s      | 2     | 12hrs     |
-| https://5f71da6964a3720016e60ff8.mockapi.io/v1 | POST   | /metrics    | Bearer SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c                                                                                                                                               | 6s      | 5     |           |
+| https://mock-api-challenge.dev.iclinic.com.br          | GET    | /physicians/:id/ | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzZXJ2aWNlIjoicGh5c2ljaWFucyJ9.Ei58MtFFGBK4uzpxwnzLxG0Ljdd-NQKVcOXIS4UYJtA | 4s      | 2     | 48hrs     |
+| https://mock-api-challenge.dev.iclinic.com.br                | GET    | /clinics/:id/    | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzZXJ2aWNlIjoiY2xpbmljcyJ9.r3w8KS4LfkKqZhOUK8YnIdLhVGJEqnReSClLCMBIJRQ     | 5s      | 3     | 72hrs     |
+| https://mock-api-challenge.dev.iclinic.com.br            | GET    | /patients/:id/   | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzZXJ2aWNlIjoicGF0aWVudHMifQ.Pr6Z58GzNRtjX8Y09hEBzl7dluxsGiaxGlfzdaphzVU   | 3s      | 2     | 12hrs     |
+| https://mock-api-challenge.dev.iclinic.com.br | POST   | /metrics/    | Bearer SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c                                                                                                                                               | 6s      | 5     |           |
 
 *Metrics Request.body*
 ```bash
 curl -X POST \
-  https://5f71da6964a3720016e60ff8.mockapi.io/v1/metrics \
+  https://mock-api-challenge.dev.iclinic.com.br/metrics/ \
   -H 'Authorization: Bearer SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -123,6 +123,14 @@ curl -X POST \
     "prescription_id": 1
 }
 ```
+
+
+### Testando a sua API
+
+Para auxiliar você a testar a aderência da sua aplicação ao que foi especificado, disponibilizamos uma [ferramenta baseada em ScanAPI](https://python-challenge-scanapi.dev.iclinic.com.br/) que faz algumas chamadas de teste à sua API e diz se está tudo conforme esperado ou se há algum problema.
+Para que ela funcione, você precisará que a aplicação esteja acessível publicamente, bastando inserir a URL da sua aplicação. Isso pode ser feito através de um serviço gratuito como o [Heroku](https://www.heroku.com/), por exemplo.
+
+É apenas uma ferramenta auxiliar: o uso não é obrigatório, nem será levado em consideração para a avaliação. Porém, é recomendável, e as chamadas podem ser feitas quantas vezes você desejar.
 
 
 ### O que esperamos
